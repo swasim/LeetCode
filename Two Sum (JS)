@@ -28,3 +28,11 @@ var twoSum = function(num, target) {
 };
 
 twoSum(num, 18);
+
+
+Complexity Analysis:
+
+Time complexity : O(n). Traversed the array list with n elements only once. Each look up in the table was only O(1) time.
+
+Space complexity : O(n). The amount of space required depends on the number of elements stored in the hash table, which can store n number of elements.
+
