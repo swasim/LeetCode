@@ -1,0 +1,30 @@
+Ex.)
+//Given nums = [2, 7, 11, 15], target = 9,
+//Because nums[0] + nums[1] = 2 + 7 = 9,
+//return [0, 1].
+<------------------------------------------------------>
+var num = [11, 3, 5, 10, 3, 2, 7];
+
+var twoSum = function(num, target) {
+    var map = {};
+    var i;
+    var value;
+    var targetValue;
+    var result = {};
+    
+    for(i = 0; i < num.length; i++) {
+        value = num[i];
+        targetValue = target - value;
+        if (targetValue in map) {
+            result[value] = i;
+            result[targetValue] = map[targetValue];
+            break;
+        } else {
+            map[value] = i;
+        }
+    }
+    console.log(value, "at position", i, "added with", targetValue,
+    "at position", map[targetValue], "will equal", target);
+};
+
+twoSum(num, 18);
