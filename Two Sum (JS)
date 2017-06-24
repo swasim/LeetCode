@@ -36,3 +36,25 @@ Time complexity : O(n). Traversed the array list with n elements only once. Each
 
 Space complexity : O(n). The amount of space required depends on the number of elements stored in the hash table, which can store n number of elements.
 
+
+
+//Another way to solve
+
+
+var twoSum = function(nums, target) {
+  var numsObject = {};
+
+    for(var i = 0; i<=nums.length; i++){
+      let integer = nums[i];
+      let result= target - integer;
+      if(typeof numsObject[result] === 'number'){
+        return [numsObject[result], i];
+      } else {
+        numsObject[integer]= i;
+      }
+      
+    }
+
+};
+
+console.log(twoSum([2,7,11,15], 9))
