@@ -1,0 +1,10 @@
+
+var num = 10;
+var total = 0;
+function loop(num){
+  for(var i=num; i>=0; i--){
+    total = i*(i-1) + total;
+  }
+}
+loop(num);
+console.log(total);
